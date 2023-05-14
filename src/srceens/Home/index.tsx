@@ -9,20 +9,20 @@ import {
   View,
 } from "react-native";
 
-import Bookmark from "../../src/assets/Bookmark.svg";
-import Comment from "../../src/assets/Comment.svg";
-import foto from "../../src/assets/WhatsApp-Image-2023-05-05-at-01.56.31.png";
-import foto2 from "../../src/assets/tiago1.png";
-import foto3 from "../../src/assets/julia.png";
-import foto4 from "../../src/assets/geo.png";
-import foto5 from "../../src/assets/henr.png";
-import Heart from "../../src/assets/Heart.svg";
-import image from "../../src/assets/feed.png";
-import Logo from "../../src/assets/logo.svg";
-import Message from "../../src/assets/message.svg";
-import Points from "../../src/assets/points.svg";
-import Share from "../../src/assets/Share.svg";
-import Stroke from "../../src/assets/stroke.svg";
+import Bookmark from "../../assets/Bookmark.svg";
+import Comment from "../../assets/Comment.svg";
+import foto from "../../assets/WhatsApp-Image-2023-05-05-at-01.56.31.png";
+import foto2 from "../../assets/tiago1.png";
+import foto3 from "../../assets/julia.png";
+import foto4 from "../../assets/geo.png";
+import foto5 from "../../assets/henr.png";
+import Heart from "../../assets/Heart.svg";
+import image from "../../assets/feed.png";
+import Logo from "../../assets/logo.svg";
+import Message from "../../assets/message.svg";
+import Points from "../../assets/points.svg";
+import Share from "../../assets/Share.svg";
+import Stroke from "../../assets/stroke.svg";
 
 const DATA = [
   {
@@ -45,7 +45,7 @@ const DATA = [
     id: Math.random().toString(36).substring(2, 15),
     pathURL: foto5,
   },
-  
+
 ];
 
 export function Home() {
@@ -73,7 +73,6 @@ export function Home() {
                 style={styles.storesCard}
                 key={item.item.id}
               >
-                
                 <Image
                   style={styles.storesCardImage}
                   source={item.item.pathURL}
@@ -85,9 +84,10 @@ export function Home() {
         <View style={styles.content}>
           <View style={styles.contentHeader}>
             <View style={styles.contentHeaderLeft}>
-              <Image
+              
+            <Image
                 style={styles.contentHeaderLeftImage}
-                source={require('../../src/assets/trap.png')}
+                source={require('../../assets/trap.png')}
               />
               <Text style={styles.contentHeaderLeftText}>trapbrfrases</Text>
             </View>
@@ -96,9 +96,7 @@ export function Home() {
 
           {/* IMAGEM TRAP DO FEED */}
           <View style={styles.contentImage}>
-
             <Image source={image} />
-            
           </View>
 
           <View style={styles.contentFooter}>
@@ -111,15 +109,17 @@ export function Home() {
               <Bookmark />
             </View>
 
-           
+            <View style={styles.contentFooter}>
+
+            </View>
           </View>
         </View>
-        
 
       </ScrollView>
     </SafeAreaView>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
